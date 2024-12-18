@@ -13,6 +13,9 @@ variable "aws_subnet_a" {
 variable "aws_subnet_b" {
 }
 
+variable "aws_subnet_с" {
+}
+
 data "aws_vpc" "lab-vpc" {
   id = var.aws_vpc_id
 }
@@ -23,6 +26,10 @@ data "aws_subnet" "lab-a" {
 
 data "aws_subnet" "lab-b" {
   id = var.aws_subnet_b
+}
+
+data "aws_subnet" "lab-с" {
+  id = var.aws_subnet_с
 }
 
 data "aws_msk_cluster" "main" {
